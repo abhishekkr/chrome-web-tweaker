@@ -1,9 +1,24 @@
 div[data-google-query-id] {
   display: none;
-  visibility: hidden;
+}
+
+h12[data-adunit] {
+  display: none;
+}
+
+.ad {
+  display: none;
 }
 
 .c-ads {
+  display: none;
+}
+
+.footer-ads {
+  display: none;
+}
+
+.bg-ssp-8017 {
   display: none;
   visibility: hidden;
 }
