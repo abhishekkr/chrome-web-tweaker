@@ -1,7 +1,7 @@
 
 ## chrome-web-tweaker
 
-> A DIY extension to tweak specific sites to have certain edits overlayed.
+> Customizable CHROME extension tweaking sites to have certain edits.
 
 ### What? Why?
 
@@ -17,6 +17,8 @@
 > * 1. Open [chrome://extensions/](chrome://extensions/).
 > * 2. Enable `Developer Mode`.
 > * 3. If drag-n-drop of this dir on the page doesn't work.. Click `Load Unpacked` button and select this dir.
+
+![Screen grab of HowTo Install](./chrome-web-tweaker.gif)
 
 
 ### How To Customize It To Your Own Needs?
