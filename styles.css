@@ -1,0 +1,9 @@
+div[data-google-query-id] {
+  display: none;
+  visibility: hidden;
+}
+
+.c-ads {
+  display: none;
+  visibility: hidden;
+}

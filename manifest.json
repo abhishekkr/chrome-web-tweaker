@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+
+  "name": "Web Tweaker",
+  "version": "0.0.1",
+  "description": "A DIY extension to tweak specific sites to have certain edits overlayed.",
+
+  "content_scripts": [{
+    "matches": ["http://*/", "http://*/*", "https://*/", "https://*/*"],
+    "css": ["styles.css"],
+    "js": ["content.js"]
+  }],
+
+  "icons": {
+   "128": "icon-128.png"
+  }
+}
