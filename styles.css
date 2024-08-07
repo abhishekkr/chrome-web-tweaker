@@ -6,29 +6,27 @@ h12[data-adunit] {
   display: none;
 }
 
-.ad {
-  display: none;
-}
-
-.c-ads {
-  display: none;
-}
-
-.footer-ads {
+.ad, .ads, .ads-auto, .c-ads, .footer-ads{
   display: none;
 }
 
 .Arpian-ads {
   display: none;
+}
+
+#container-47b04e4c352e2eb6a8e291b6ddf7e7e0 {
+  display: none;
+}
+
+.h12container {
+  display: none;
   visibility: hidden;
 }
 
-#d_IL_INSEARCH, #container-47b04e4c352e2eb6a8e291b6ddf7e7e0 {
+.IL_BASE, .OUTBRAIN {
   display: none;
-  visibility: hidden;
 }
 
 .bg-ssp-8017 {
   display: none;
-  visibility: hidden;
 }

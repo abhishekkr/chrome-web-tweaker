@@ -31,11 +31,19 @@ function check_and_remove_from_selector(selector, check){
 
 function remove_ads(timer=0){
   check_and_remove_from_tagname("iframe", function(n){
-      return n.style != undefined && n.style.display == "none";
+      return (n.style != undefined && n.style.display == "none") ||
+        n.src == "about:blank" ||
+        n.src == document.URL;
     });
 
   check_and_remove_from_tagname("div", function(n){
-      return n.className != undefined && n.className.includes("bg-ssp-");
+      return n.className != undefined && (
+        n.className.includes("bg-ssp-") ||
+        n.className.includes("h12container") ||
+        n.className.includes("IL_BASE") ||
+        n.className.includes("OUTBRAIN") ||
+        n.hasAttribute('data-google-query-id')
+      );
     });
 
   check_and_remove_from_tagname("h12", function(n){
