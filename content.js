@@ -1,25 +1,38 @@
-function remove_ads(){
-  let div_nodes = document.getElementsByTagName("div");
-  if (div_nodes.length > 0) {
-    for (n in div_nodes) {
-      if (n.className != undefined && n.className.includes("bg-ssp-")) {
-        console.log("****************************", n.className);
+function check_and_remove_from_selector(selector, check){
+  let tag_nodes = document.getElementsByTagName(selector);
+  for (let i = 0; i < tag_nodes.length; ++i) {
+    let n = tag_nodes[i];
+    try {
+      if (check(n) === true) {
         n.remove();
+        console.log("****[INFO] WEB-TWEAKER::", selector, " removed for", n);
       }
+    } catch(err) {
+      console.log("****[ERROR] WEB-TWEAKER::", selector, " remove for", n);
     }
-    console.log("hiding ads in div[bg-ssp-*] missed by css");
   }
 
-  let h12_nodes = document.getElementsByTagName("h12");
-  if (h12_nodes.length > 0) {
-    for (n in h12_nodes) {
-      if (n.hasAttribute("data-adunit")) {
-        n.remove();
-      }
-    }
-    console.log("hiding ads in h12[data-adunit] missed by css");
-  }
+}
+
+
+function remove_ads(timer=0){
+  check_and_remove_from_selector("iframe", function(n){
+      return n.style != undefined && n.style.display == "none";
+    });
+
+  check_and_remove_from_selector("div", function(n){
+      return n.className != undefined && n.className.includes("bg-ssp-");
+    });
+
+  check_and_remove_from_selector("h12", function(n){
+      return n.hasAttribute("data-adunit");
+    });
+
   console.log("web-tweaker::remove_ads");
+  timer += 1000;
+  setTimeout(() => {
+    remove_ads(timer);
+  }, timer); // run every 10sec for re-injecting scripts
 }
 
 // remove_ads();

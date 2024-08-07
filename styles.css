@@ -18,6 +18,16 @@ h12[data-adunit] {
   display: none;
 }
 
+.Arpian-ads {
+  display: none;
+  visibility: hidden;
+}
+
+#d_IL_INSEARCH {
+  display: none;
+  visibility: hidden;
+}
+
 .bg-ssp-8017 {
   display: none;
   visibility: hidden;
