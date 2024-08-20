@@ -33,6 +33,8 @@ function remove_ads(timer=0){
   check_and_remove_from_tagname("iframe", function(n){
       return (n.style != undefined && n.style.display == "none") ||
         n.src == "about:blank" ||
+        n.src == "" ||
+        n.src.includes('ad.a-ads.com') ||
         n.src == document.URL;
     });
 
