@@ -42,6 +42,7 @@ function remove_ads(timer=0){
         n.className.includes("h12container") ||
         n.className.includes("IL_BASE") ||
         n.className.includes("OUTBRAIN") ||
+        n.className.includes("st-adunit-ad") ||
         n.hasAttribute('data-google-query-id')
       );
     });

@@ -1,32 +1,79 @@
 div[data-google-query-id] {
   display: none;
+  opacity: 0;
 }
 
 h12[data-adunit] {
   display: none;
+  opacity: 0;
 }
 
-.ad, .ads, .ads-auto, .c-ads, .footer-ads{
+div[data-hook-id] {
   display: none;
-}
-
-.Arpian-ads {
-  display: none;
+  opacity: 0;
 }
 
 #container-47b04e4c352e2eb6a8e291b6ddf7e7e0 {
   display: none;
+  opacity: 0;
+}
+
+.ad {
+  display: none;
+  opacity: 0;
+}
+
+.ads {
+  display: none;
+  opacity: 0;
+}
+
+.ads-auto {
+  display: none;
+  opacity: 0;
+}
+
+.c-ads {
+  display: none;
+  opacity: 0;
+}
+
+.footer-ads {
+  display: none;
+  opacity: 0;
+}
+
+.Arpian-ads {
+  display: none;
+  opacity: 0;
+}
+
+.st-adunit {
+  display: none;
+  opacity: 0;
+}
+
+.st-adunit-ad {
+  display: none;
+  opacity: 0;
 }
 
 .h12container {
   display: none;
-  visibility: hidden;
+  opacity: 0;
 }
 
-.IL_BASE, .OUTBRAIN {
+.IL_BASE {
   display: none;
+  opacity: 0;
+}
+
+.OUTBRAIN {
+  display: none;
+  opacity: 0;
 }
 
 .bg-ssp-8017 {
   display: none;
+  opacity: 0;
 }
