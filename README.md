@@ -7,8 +7,8 @@
 
 * Currently it does following..
 
-> * Hides all Google Ads, that gets shown in `div[data-google-query-id]`.
-> * Hides ads shown in containers with `*[class=c-ads]`.
+> * Hides all Google Ads, that gets shown in `div[data-google-query-id]` & others.
+> * Runs JS recursively with a backoff, to keep removing bad elements that site's JS keeps injecting.
 
 * The purpose of this local extension is simple. Load it in your local chrome and keep tweaking a set of CSS/JS actions you wish to have applied by default.
 
@@ -17,6 +17,8 @@
 > * 1. Open [chrome://extensions/](chrome://extensions/).
 > * 2. Enable `Developer Mode`.
 > * 3. If drag-n-drop of this dir on the page doesn't work.. Click `Load Unpacked` button and select this dir.
+
+[Youtube video on building it's first version.](https://youtu.be/mMB23Am5hGM?si=HZtsbSQ08rggF-zI), might help get a better insight.
 
 ![Screen grab of HowTo Install](./chrome-web-tweaker.gif)
 
