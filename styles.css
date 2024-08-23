@@ -18,6 +18,11 @@ div[data-hook-id] {
   opacity: 0;
 }
 
+#ubdirect_ads, #ub-roller-wrapper {
+  display: none;
+  opacity: 0;
+}
+
 .ad {
   display: none;
   opacity: 0;
@@ -74,6 +79,11 @@ div[data-hook-id] {
 }
 
 .bg-ssp-8017 {
+  display: none;
+  opacity: 0;
+}
+
+.PUBFUTURE {
   display: none;
   opacity: 0;
 }

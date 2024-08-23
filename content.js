@@ -49,6 +49,8 @@ function remove_ads(timer=0){
       );
     });
 
+  check_and_remove_from_selector("[id^='div_netpub_ins_']", () => { return true; });
+
   check_and_remove_from_tagname("h12", function(n){
       return n.hasAttribute("data-adunit");
     });
@@ -61,7 +63,9 @@ function remove_ads(timer=0){
         link = n.getAttribute("href");
       }
       return link.includes("shameful-leader.com") ||
-        link.includes("//equipmentapes.com");
+        link.includes("//equipmentapes.com") ||
+        link.includes("//platform.bidgear.com") ||
+        link.includes("//cdn.pubfuture-ad.com");
     });
 
   console.log("web-tweaker::remove_ads");
