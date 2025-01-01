@@ -50,6 +50,7 @@ function remove_ads(timer=0){
     });
 
   check_and_remove_from_selector("[id^='div_netpub_ins_']", () => { return true; });
+  check_and_remove_from_selector("[data-izone='uc-area']", () => { return true; });
 
   check_and_remove_from_tagname("h12", function(n){
       return n.hasAttribute("data-adunit");
@@ -65,6 +66,7 @@ function remove_ads(timer=0){
       return link.includes("shameful-leader.com") ||
         link.includes("//equipmentapes.com") ||
         link.includes("//platform.bidgear.com") ||
+        link.includes("//bk.birlersbhunder.com") ||
         link.includes("//cdn.pubfuture-ad.com");
     });
 
