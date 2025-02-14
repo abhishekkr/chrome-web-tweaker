@@ -45,11 +45,13 @@ function remove_ads(timer=0){
         n.className.includes("IL_BASE") ||
         n.className.includes("OUTBRAIN") ||
         n.className.includes("st-adunit-ad") ||
+        n.className.includes('_4KjPzfFqnPyBgIgiXkX') ||
         n.hasAttribute('data-google-query-id')
       );
     });
 
   check_and_remove_from_selector("[id^='div_netpub_ins_']", () => { return true; });
+  check_and_remove_from_selector("[id^='player-ads']", () => { return true; }); // on youtube
   check_and_remove_from_selector("[data-izone='uc-area']", () => { return true; });
 
   check_and_remove_from_tagname("h12", function(n){
