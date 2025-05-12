@@ -46,6 +46,9 @@ function remove_ads(timer=0){
         n.className.includes("OUTBRAIN") ||
         n.className.includes("st-adunit-ad") ||
         n.className.includes('_4KjPzfFqnPyBgIgiXkX') ||
+        n.className.includes('ytd-ad-slot-renderer') ||
+        n.className.includes('ch2 ch2-region-g0') ||      // CookieHub
+        n.className.includes('cookie__box') ||            // RudderStack
         n.hasAttribute('data-google-query-id')
       );
     });
@@ -57,6 +60,16 @@ function remove_ads(timer=0){
   check_and_remove_from_selector("[id^='transcend-consent-manager']", () => { return true; });
   // OneTrust Consent Manager; used at Reuters
   check_and_remove_from_selector("[id^='onetrust-consent-sdk']", () => { return true; });
+  // consentmanager.net Cookie Consent
+  check_and_remove_from_selector("[id^='cmpwrapper']", () => { return true; });
+  // Amplitude.com Cookie Consent
+  check_and_remove_from_selector("[id^='ccc-overlay']", () => { return true; });
+  // CookieInformation.com Cookie Consent
+  check_and_remove_from_selector("[id^='cookie-information-template-wrapper']", () => { return true; });
+  // usercentrics.com Cookie Consent
+  check_and_remove_from_selector("[id^='usercentrics-cmp-ui']", () => { return true; });
+  // termly.io Cookie Consent
+  check_and_remove_from_selector("[id^='termly-code-snippet-support']", () => { return true; });
 
   check_and_remove_from_tagname("h12", function(n){
       return n.hasAttribute("data-adunit");
