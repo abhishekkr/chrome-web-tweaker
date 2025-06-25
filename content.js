@@ -1,3 +1,12 @@
+/**
+ * DWMW: don't work might work
+ ** #check_and_remove_from_selector("[aria-label^='cookie consent banner']", () => { return true; });
+ ** #check_and_remove_from_selector("[id^='consentManagerMainDialog']", () => { return true; });
+ *
+ * CookieHub n.className.includes('ch2 ch2-region-g0')
+ */
+
+
 function check_and_remove_from_tagname(selector, check){
   let tag_nodes = document.getElementsByTagName(selector);
   for (let i = 0; i < tag_nodes.length; ++i) {
@@ -49,12 +58,14 @@ function remove_ads(timer=0){
         n.className.includes('ytd-ad-slot-renderer') ||
         n.className.includes('ch2 ch2-region-g0') ||      // CookieHub
         n.className.includes('cookie__box') ||            // RudderStack
+        n.className.includes('nas-slot') ||            // IMDB ads
         n.hasAttribute('data-google-query-id')
       );
     });
 
   check_and_remove_from_selector("[id^='div_netpub_ins_']", () => { return true; });
   check_and_remove_from_selector("[id^='player-ads']", () => { return true; }); // on youtube
+  check_and_remove_from_selector("[id^='jpmasthead']", () => { return true; }); // on techcrunch
   check_and_remove_from_selector("[data-izone='uc-area']", () => { return true; });
   // Transcend Consent Manager: https://transcend.io/platform/consent-management ; used at blackhat.com
   check_and_remove_from_selector("[id^='transcend-consent-manager']", () => { return true; });
