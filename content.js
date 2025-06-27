@@ -58,7 +58,9 @@ function remove_ads(timer=0){
         n.className.includes('ytd-ad-slot-renderer') ||
         n.className.includes('ch2 ch2-region-g0') ||      // CookieHub
         n.className.includes('cookie__box') ||            // RudderStack
-        n.className.includes('nas-slot') ||            // IMDB ads
+        n.className.includes('nas-slot') ||               // IMDB ads
+        n.className.includes('top-ads-container') ||      // Fandom Wiki top ads
+        n.className.includes('page__right-rail') ||       // Fandom Wiki side ads
         n.hasAttribute('data-google-query-id')
       );
     });
