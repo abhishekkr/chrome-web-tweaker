@@ -56,6 +56,7 @@ function remove_ads(timer=0){
         n.className.includes("st-adunit-ad") ||
         n.className.includes('_4KjPzfFqnPyBgIgiXkX') ||
         n.className.includes('ytd-ad-slot-renderer') ||
+        n.className.includes('bx-type-overlay') ||        // Signup Overlay bounceexchange.com
         n.className.includes('ch2 ch2-region-g0') ||      // CookieHub
         n.className.includes('cookie__box') ||            // RudderStack
         n.className.includes('nas-slot') ||               // IMDB ads
